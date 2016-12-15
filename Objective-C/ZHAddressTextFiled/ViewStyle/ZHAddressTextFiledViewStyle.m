@@ -7,7 +7,7 @@
 //
 
 #import "ZHAddressTextFiledViewStyle.h"
-#import "DefineFunction.h"
+#import "ZHDefineFunction.h"
 
 @implementation ZHAddressTextFiledViewStyle
 

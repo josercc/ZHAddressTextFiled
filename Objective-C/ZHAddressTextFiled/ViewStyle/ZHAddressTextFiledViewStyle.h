@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZHDefineBlocks.h"
 
 
 /**
@@ -92,5 +93,10 @@ typedef NS_ENUM(NSUInteger, ATFVEditState) {
  当前的标识
  */
 @property (nonatomic, assign) NSUInteger tag;
+
+/**
+ 验证输入字符串是否符合规定
+ */
+@property (nonatomic, copy) ATFVValidateInputCorrectComplete  validateInputCorrectComplete;
 
 @end

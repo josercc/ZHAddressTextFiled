@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZHAddressTextFiled"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "简单的地址输入框"
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'ZHAddressTextFiled/**/*'
+  s.source_files  = 'ZHAddressTextFiled/*.h'
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

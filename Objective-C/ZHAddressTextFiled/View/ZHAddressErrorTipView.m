@@ -7,8 +7,8 @@
 //
 
 #import "ZHAddressErrorTipView.h"
-#import "DefineFunction.h"
-#import <Masonry/Masonry.h>
+#import "ZHDefineFunction.h"
+#import "Masonry.h"
 #import "ZHAddressTextFiledView.h"
 
 @interface ZHAddressErrorTipView ()
@@ -29,7 +29,7 @@
 @end
 
 @implementation ZHAddressErrorTipView {
-    CGFloat _maxErrorTipWidth; // 最大提示的宽度
+    CGFloat _maxErrorTipWidth; // 最大提示的宽度 让程序进行自动的计算
 }
 
 + (instancetype)sharedInstance{
@@ -44,7 +44,7 @@
 #pragma mark - Init
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        _maxErrorTipWidth = [UIScreen mainScreen].bounds.size.width - 60;
+        _maxErrorTipWidth = [UIScreen mainScreen].bounds.size.width - 60; // 默认最大的显示宽度为屏幕的宽度减去60
         self.userInteractionEnabled = NO;
         [self AETVAddSubViews];
         [self AETVAutoLayouts];
@@ -52,12 +52,19 @@
     return self;
 }
 
+#pragma mark - 布局
+/**
+ 添加子试图
+ */
 - (void)AETVAddSubViews {
     [self addSubview:self.errorTipImageView];
     [self addSubview:self.triangleImageView];
     [self addSubview:self.errorTipLabel];
 }
 
+/**
+ 设置约束
+ */
 - (void)AETVAutoLayouts {
     [self.errorTipImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.trailing.equalTo(self);
@@ -75,24 +82,57 @@
     
 }
 
-#pragma mark - 展示
+#pragma mark - 展示错误信息
 - (void)showInAddressView:(ZHAddressTextFiledView *)addressView errorTipString:(NSString *)errorTipString {
-    NSParameterAssert(addressView);
-    NSParameterAssert(errorTipString.length > 0);
+    NSParameterAssert(addressView); // 展示错误信息的父试图必须存在
+    NSParameterAssert(errorTipString.length > 0); // 展示的内容长度必须大于0
+    ZHAddressTextFiledView *oldSuperView = (ZHAddressTextFiledView *)self.superview; // 获取错误试图之前的父试图
+    if (oldSuperView) {
+        [oldSuperView reloadNormalState]; // 如果有就改变之前父试图的状态
+    }
+    [self errorBiggestError:addressView];
     self.errorTipLabel.text = errorTipString;
     CGSize size = [self.errorTipLabel sizeThatFits:CGSizeMake(_maxErrorTipWidth, CGFLOAT_MAX)];
     CGFloat width = size.width <= 17 ? 17 : size.width + 10;
     CGFloat height = 17 + 3 + size.height;
-    [addressView addSubview:self];
+    UIView *view = addressView;
+    [view addSubview:self];
     [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.equalTo(addressView);
-        make.top.equalTo(addressView.mas_bottom).offset(-25);
+        make.trailing.equalTo(view);
+        make.top.equalTo(view.mas_bottom).offset(-25);
         make.size.mas_equalTo(CGSizeMake(width, height));
     }];
 }
 
+/**
+ 计算当前试图最大展示错误的宽度
+
+ @param addressView 展示错误的试图
+ */
+- (void)errorBiggestError:(ZHAddressTextFiledView *)addressView {
+    UIView *view = addressView.superview; // 获取展示试图的父试图
+    BOOL stopLoop = NO; // 是否停止查找
+    while (!stopLoop) {
+        if (!view) {
+            stopLoop = YES; // 如果父试图不存在就停止查找
+            continue;
+        }else if(CGRectGetWidth(view.frame) == [UIScreen mainScreen].bounds.size.width) {
+            // 查找如果父试图宽度是整个屏幕的宽度 停止查找
+            stopLoop = YES;
+            break;
+        }
+        view = view.superview;
+    }
+    if (view) {
+        CGRect frame = [addressView convertRect:addressView.bounds toView:view]; // 获取展示试图在查找父试图所在的位置
+        _maxErrorTipWidth = CGRectGetMaxX(frame) - 40; // 获取最大展示错误的宽度
+    }
+
+
+}
+
 - (void)hide {
-    [self removeFromSuperview];
+    [self removeFromSuperview]; // 移除错误试图
 }
 
 #pragma mark - Getter
