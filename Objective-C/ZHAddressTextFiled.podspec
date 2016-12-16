@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ZHAddressTextFiled"
-  s.version      = "1.0.3"
+  s.version      = "1.0.5"
   s.summary      = "简单的地址输入框"
   s.homepage     = "https://github.com/josercc/ZHAddressTextFiled"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'ZHAddressTextFiled/**/*.{h,m}'
+  s.source_files  = 'Objective-C/ZHAddressTextFiled/**/*.{h,m,png}'
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

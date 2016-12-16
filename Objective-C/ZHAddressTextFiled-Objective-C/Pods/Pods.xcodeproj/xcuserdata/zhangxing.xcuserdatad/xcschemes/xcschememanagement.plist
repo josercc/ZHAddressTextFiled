@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>ZHAddressTextFiled.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>90A0AB0432973C68CA4F7A8577B0DAC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD3A4A9FC868735559C8EC3465594A8B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0BEAEFA670C5B97B7F1A7A5D5265433</key>
 		<dict>
 			<key>primary</key>
 			<true/>

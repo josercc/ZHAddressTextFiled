@@ -8,5 +8,6 @@ target 'ZHAddressTextFiled-Objective-C' do
   # use_frameworks!
 
   pod "Masonry"
+  pod 'ZHAddressTextFiled'
 
 end

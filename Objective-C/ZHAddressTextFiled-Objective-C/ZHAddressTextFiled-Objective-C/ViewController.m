@@ -20,6 +20,12 @@
     style.inputPromptText = @"First Name:";
     style.errorTipText = @"First Name length must be greater than or equal to 2 characters";
     ZHAddressTextFiledView *addressView = [[ZHAddressTextFiledView alloc] initWithStyle:style frame:CGRectMake(20, 50, [UIScreen mainScreen].bounds.size.width - 40, 50)];
+    addressView.validateInputCorrectComplete = ^NSString *(NSString *inputText) {
+        if (inputText.length <= 2) {
+            return @"输入的长度必须大于2";
+        }
+        return nil;
+    };
     [self.view addSubview:addressView];
 
     ZHAddressTextFiledViewStyle *style1 = [[ZHAddressTextFiledViewStyle alloc] init];

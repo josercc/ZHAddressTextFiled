@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D691CBA1E029CDC0077FD34 /* ATF_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D691CA91E029CDC0077FD34 /* ATF_close@2x.png */; };
-		5D691CBB1E029CDC0077FD34 /* ATF_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D691CAA1E029CDC0077FD34 /* ATF_close@3x.png */; };
-		5D691CBC1E029CDC0077FD34 /* ATF_tip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D691CAB1E029CDC0077FD34 /* ATF_tip@2x.png */; };
-		5D691CBD1E029CDC0077FD34 /* ATF_tip@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D691CAC1E029CDC0077FD34 /* ATF_tip@3x.png */; };
-		5D691CBE1E029CDC0077FD34 /* aTF_Triangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D691CAD1E029CDC0077FD34 /* aTF_Triangle@2x.png */; };
-		5D691CBF1E029CDC0077FD34 /* aTF_Triangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D691CAE1E029CDC0077FD34 /* aTF_Triangle@3x.png */; };
-		5D691CC01E029CDC0077FD34 /* ZHAddressErrorTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D691CB31E029CDC0077FD34 /* ZHAddressErrorTipView.m */; };
-		5D691CC11E029CDC0077FD34 /* ZHAddressTextFiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D691CB51E029CDC0077FD34 /* ZHAddressTextFiledView.m */; };
-		5D691CC21E029CDC0077FD34 /* ZHAddressTextFiledViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D691CB81E029CDC0077FD34 /* ZHAddressTextFiledViewStyle.m */; };
 		5DFDF5471DFF8DFB00C900E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFDF5461DFF8DFB00C900E7 /* main.m */; };
 		5DFDF54A1DFF8DFB00C900E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFDF5491DFF8DFB00C900E7 /* AppDelegate.m */; };
 		5DFDF54D1DFF8DFB00C900E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFDF54C1DFF8DFB00C900E7 /* ViewController.m */; };
@@ -28,22 +19,6 @@
 /* Begin PBXFileReference section */
 		1E4AECF213F30BBB28BCF2AC /* Pods-ZHAddressTextFiled-Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHAddressTextFiled-Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHAddressTextFiled-Objective-C/Pods-ZHAddressTextFiled-Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		4A9B29F4D3E337FA5B29FC28 /* libPods-ZHAddressTextFiled-Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZHAddressTextFiled-Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D691CA61E029CDC0077FD34 /* ZHDefineBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDefineBlocks.h; sourceTree = "<group>"; };
-		5D691CA71E029CDC0077FD34 /* ZHDefineFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDefineFunction.h; sourceTree = "<group>"; };
-		5D691CA91E029CDC0077FD34 /* ATF_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_close@2x.png"; sourceTree = "<group>"; };
-		5D691CAA1E029CDC0077FD34 /* ATF_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_close@3x.png"; sourceTree = "<group>"; };
-		5D691CAB1E029CDC0077FD34 /* ATF_tip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_tip@2x.png"; sourceTree = "<group>"; };
-		5D691CAC1E029CDC0077FD34 /* ATF_tip@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_tip@3x.png"; sourceTree = "<group>"; };
-		5D691CAD1E029CDC0077FD34 /* aTF_Triangle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aTF_Triangle@2x.png"; sourceTree = "<group>"; };
-		5D691CAE1E029CDC0077FD34 /* aTF_Triangle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aTF_Triangle@3x.png"; sourceTree = "<group>"; };
-		5D691CB01E029CDC0077FD34 /* ZHAddressTextFiledViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiledViewDataSource.h; sourceTree = "<group>"; };
-		5D691CB21E029CDC0077FD34 /* ZHAddressErrorTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressErrorTipView.h; sourceTree = "<group>"; };
-		5D691CB31E029CDC0077FD34 /* ZHAddressErrorTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAddressErrorTipView.m; sourceTree = "<group>"; };
-		5D691CB41E029CDC0077FD34 /* ZHAddressTextFiledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiledView.h; sourceTree = "<group>"; };
-		5D691CB51E029CDC0077FD34 /* ZHAddressTextFiledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAddressTextFiledView.m; sourceTree = "<group>"; };
-		5D691CB71E029CDC0077FD34 /* ZHAddressTextFiledViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiledViewStyle.h; sourceTree = "<group>"; };
-		5D691CB81E029CDC0077FD34 /* ZHAddressTextFiledViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAddressTextFiledViewStyle.m; sourceTree = "<group>"; };
-		5D691CB91E029CDC0077FD34 /* ZHAddressTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiled.h; sourceTree = "<group>"; };
 		5DFDF5421DFF8DFB00C900E7 /* ZHAddressTextFiled-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZHAddressTextFiled-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFDF5461DFF8DFB00C900E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DFDF5481DFF8DFB00C900E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,70 +44,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D691CA41E029CDC0077FD34 /* ZHAddressTextFiled */ = {
-			isa = PBXGroup;
-			children = (
-				5D691CA51E029CDC0077FD34 /* Defines */,
-				5D691CA81E029CDC0077FD34 /* images */,
-				5D691CAF1E029CDC0077FD34 /* Protocols */,
-				5D691CB11E029CDC0077FD34 /* View */,
-				5D691CB61E029CDC0077FD34 /* ViewStyle */,
-				5D691CB91E029CDC0077FD34 /* ZHAddressTextFiled.h */,
-			);
-			name = ZHAddressTextFiled;
-			path = ../../ZHAddressTextFiled;
-			sourceTree = "<group>";
-		};
-		5D691CA51E029CDC0077FD34 /* Defines */ = {
-			isa = PBXGroup;
-			children = (
-				5D691CA61E029CDC0077FD34 /* ZHDefineBlocks.h */,
-				5D691CA71E029CDC0077FD34 /* ZHDefineFunction.h */,
-			);
-			path = Defines;
-			sourceTree = "<group>";
-		};
-		5D691CA81E029CDC0077FD34 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				5D691CA91E029CDC0077FD34 /* ATF_close@2x.png */,
-				5D691CAA1E029CDC0077FD34 /* ATF_close@3x.png */,
-				5D691CAB1E029CDC0077FD34 /* ATF_tip@2x.png */,
-				5D691CAC1E029CDC0077FD34 /* ATF_tip@3x.png */,
-				5D691CAD1E029CDC0077FD34 /* aTF_Triangle@2x.png */,
-				5D691CAE1E029CDC0077FD34 /* aTF_Triangle@3x.png */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		5D691CAF1E029CDC0077FD34 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				5D691CB01E029CDC0077FD34 /* ZHAddressTextFiledViewDataSource.h */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		5D691CB11E029CDC0077FD34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5D691CB21E029CDC0077FD34 /* ZHAddressErrorTipView.h */,
-				5D691CB31E029CDC0077FD34 /* ZHAddressErrorTipView.m */,
-				5D691CB41E029CDC0077FD34 /* ZHAddressTextFiledView.h */,
-				5D691CB51E029CDC0077FD34 /* ZHAddressTextFiledView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5D691CB61E029CDC0077FD34 /* ViewStyle */ = {
-			isa = PBXGroup;
-			children = (
-				5D691CB71E029CDC0077FD34 /* ZHAddressTextFiledViewStyle.h */,
-				5D691CB81E029CDC0077FD34 /* ZHAddressTextFiledViewStyle.m */,
-			);
-			path = ViewStyle;
-			sourceTree = "<group>";
-		};
 		5DFDF5391DFF8DFB00C900E7 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +65,6 @@
 		5DFDF5441DFF8DFB00C900E7 /* ZHAddressTextFiled-Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				5D691CA41E029CDC0077FD34 /* ZHAddressTextFiled */,
 				5DFDF5481DFF8DFB00C900E7 /* AppDelegate.h */,
 				5DFDF5491DFF8DFB00C900E7 /* AppDelegate.m */,
 				5DFDF54B1DFF8DFB00C900E7 /* ViewController.h */,
@@ -255,14 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D691CBE1E029CDC0077FD34 /* aTF_Triangle@2x.png in Resources */,
-				5D691CBD1E029CDC0077FD34 /* ATF_tip@3x.png in Resources */,
 				5DFDF5551DFF8DFB00C900E7 /* LaunchScreen.storyboard in Resources */,
-				5D691CBA1E029CDC0077FD34 /* ATF_close@2x.png in Resources */,
-				5D691CBC1E029CDC0077FD34 /* ATF_tip@2x.png in Resources */,
 				5DFDF5521DFF8DFB00C900E7 /* Assets.xcassets in Resources */,
-				5D691CBB1E029CDC0077FD34 /* ATF_close@3x.png in Resources */,
-				5D691CBF1E029CDC0077FD34 /* aTF_Triangle@3x.png in Resources */,
 				5DFDF5501DFF8DFB00C900E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,10 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D691CC01E029CDC0077FD34 /* ZHAddressErrorTipView.m in Sources */,
 				5DFDF54D1DFF8DFB00C900E7 /* ViewController.m in Sources */,
-				5D691CC11E029CDC0077FD34 /* ZHAddressTextFiledView.m in Sources */,
-				5D691CC21E029CDC0077FD34 /* ZHAddressTextFiledViewStyle.m in Sources */,
 				5DFDF54A1DFF8DFB00C900E7 /* AppDelegate.m in Sources */,
 				5DFDF5471DFF8DFB00C900E7 /* main.m in Sources */,
 			);
