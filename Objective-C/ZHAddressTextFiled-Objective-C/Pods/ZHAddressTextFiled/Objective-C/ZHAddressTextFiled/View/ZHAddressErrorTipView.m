@@ -13,15 +13,15 @@
 
 @interface ZHAddressErrorTipView ()
 
-/**
+/*!
  错误提示的图标
  */
 @property (nonatomic, strong) UIImageView *errorTipImageView;
-/**
+/*!
  显示三角符号
  */
 @property (nonatomic, strong) UIImageView *triangleImageView;
-/**
+/*!
  显示错误的提示语
  */
 @property (nonatomic, strong) UILabel *errorTipLabel;
@@ -53,7 +53,7 @@
 }
 
 #pragma mark - 布局
-/**
+/*!
  添加子试图
  */
 - (void)AETVAddSubViews {
@@ -62,7 +62,7 @@
     [self addSubview:self.errorTipLabel];
 }
 
-/**
+/*!
  设置约束
  */
 - (void)AETVAutoLayouts {
@@ -104,7 +104,7 @@
     }];
 }
 
-/**
+/*!
  计算当前试图最大展示错误的宽度
 
  @param addressView 展示错误的试图

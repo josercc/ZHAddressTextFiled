@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ZHAddressTextFiled"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "简单的地址输入框"
   s.homepage     = "https://github.com/josercc/ZHAddressTextFiled"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "Objective-C/ZHAddressTextFiled/ZHAddressTextFiled.bundle"
+  s.resources = "Objective-C/ZHAddressTextFiled/images/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

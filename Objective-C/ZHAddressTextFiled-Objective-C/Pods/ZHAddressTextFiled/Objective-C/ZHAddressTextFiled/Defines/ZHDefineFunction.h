@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-/**
+/*!
  数字RGB转换成颜色 数字在0-255之间
 
  @param red Red的值

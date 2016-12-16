@@ -6,7 +6,7 @@
 //  Copyright © 2016年 GearBest. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-/**
+/*!
  验证输入的是否正确
 
  @param inputText 输入的文本

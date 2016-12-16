@@ -10,19 +10,20 @@
 #import "ZHAddressTextFiledViewStyle.h"
 #import "Masonry.h"
 #import "ZHAddressErrorTipView.h"
+#import "NSBundle+ZHAddressTextFiled.h"
 
 
 @interface ZHAddressTextFiledView ()<UITextFieldDelegate>
 
-/**
+/*!
  输入提示
  */
 @property (nonatomic, strong) UILabel *inputPromptTitleLabel;
-/**
+/*!
  输入信息的输入框
  */
 @property (nonatomic, strong) UITextField *inputTextFiled;
-/**
+/*!
  底部的分割线
  */
 @property (nonatomic, strong) UIView *bottomLineView;
@@ -60,7 +61,7 @@
     [self ATFVStepStyle];
 }
 
-/**
+/*!
  查找的输入框是否是当前界面的输入框
 
  @param textFiled 查找的输入框
@@ -71,7 +72,7 @@
 }
 
 #pragma mark - 键盘即将弹出
-/**
+/*!
  输入框开始编辑开始
 
  @param notication 通知
@@ -87,7 +88,7 @@
     }
 }
 
-/**
+/*!
  输入框结束编辑
 
  @param notication 通知
@@ -100,7 +101,7 @@
     }
 }
 
-/**
+/*!
  让用户自动调用回复默认状态
  */
 - (void)reloadNormalState {
@@ -110,7 +111,7 @@
     }
 }
 
-/**
+/*!
  更新当前的状态
 
  @param state 当前的状态
@@ -271,7 +272,7 @@
         _inputTextFiled.delegate = self;
         _inputTextFiled.returnKeyType = UIReturnKeyNext;
         UIButton *btn = [_inputTextFiled valueForKey:@"_clearButton"];
-        [btn setImage:[UIImage imageNamed:@"ATF_close"] forState:UIControlStateNormal];
+        [btn setImage:[NSBundle ATF_imageNamed:@"images/ATF_close"] forState:UIControlStateNormal];
 	}
 	return _inputTextFiled;
 }

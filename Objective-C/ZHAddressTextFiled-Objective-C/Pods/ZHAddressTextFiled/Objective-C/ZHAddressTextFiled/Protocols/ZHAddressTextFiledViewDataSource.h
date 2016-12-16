@@ -10,12 +10,12 @@
 
 @class ZHAddressTextFiledView;
 
-/**
+/*!
  ZHAddressTextFiledView数据源
  */
 @protocol ZHAddressTextFiledViewDataSource <NSObject>
 
-/**
+/*!
  是否允许输入框可以编辑
 
  @param view 输入框试图对象
