@@ -30,7 +30,7 @@
 
 4. 显示错误的提示语:ATFVEditStateEditedError
 
-   ![](http://ww2.sinaimg.cn/large/006tNc79gw1fasd469ijsj30d502bmx4.jpg)
+   ![](http://ww3.sinaimg.cn/large/006tNc79gw1fasghrdibfj30d101z3yh.jpg)
 
 ## 安装
 
@@ -69,4 +69,3 @@ addressView.validateInputCorrectComplete = ^NSString *(NSString *inputText) {
     };
 ```
 
-更多的帮助信息请查看api文档

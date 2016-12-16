@@ -164,7 +164,7 @@
 
 #pragma mark - 移动提示文本到顶部
 - (void)movePromptToTop {
-    BOOL isAllowMove = _style.editState == ATFVEditStateNormal || (_style.inputAddressText.length == 0 && _style.editState == ATFVEditStateEditedError);
+    BOOL isAllowMove = _style.editState == ATFVEditStateNormal || _style.inputAddressText.length == 0;
     if (!isAllowMove) {
         // 如果当前的状态不是默认 就允许继续操作
         return;
