@@ -80,10 +80,20 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/ZHAddressTextFiled.bundle"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_close@2x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_close@3x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_tip@2x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_tip@3x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/aTF_Triangle@2x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/aTF_Triangle@3x.png"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/ZHAddressTextFiled.bundle"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_close@2x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_close@3x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_tip@2x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/ATF_tip@3x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/aTF_Triangle@2x.png"
+  install_resource "ZHAddressTextFiled/Objective-C/ZHAddressTextFiled/images/aTF_Triangle@3x.png"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

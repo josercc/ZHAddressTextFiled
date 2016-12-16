@@ -10,7 +10,6 @@
 #import "ZHAddressTextFiledViewStyle.h"
 #import "Masonry.h"
 #import "ZHAddressErrorTipView.h"
-#import "NSBundle+ZHAddressTextFiled.h"
 
 
 @interface ZHAddressTextFiledView ()<UITextFieldDelegate>
@@ -165,7 +164,8 @@
 
 #pragma mark - 移动提示文本到顶部
 - (void)movePromptToTop {
-    if (_style.editState != ATFVEditStateNormal) {
+    BOOL isAllowMove = _style.editState == ATFVEditStateNormal || (_style.inputAddressText.length == 0 && _style.editState == ATFVEditStateEditedError);
+    if (!isAllowMove) {
         // 如果当前的状态不是默认 就允许继续操作
         return;
     }
@@ -272,7 +272,7 @@
         _inputTextFiled.delegate = self;
         _inputTextFiled.returnKeyType = UIReturnKeyNext;
         UIButton *btn = [_inputTextFiled valueForKey:@"_clearButton"];
-        [btn setImage:[NSBundle ATF_imageNamed:@"images/ATF_close"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"ATF_close"] forState:UIControlStateNormal];
 	}
 	return _inputTextFiled;
 }

@@ -1,6 +1,6 @@
 PODS:
   - Masonry (1.0.2)
-  - ZHAddressTextFiled (1.0.6):
+  - ZHAddressTextFiled (1.0.7):
     - Masonry
 
 DEPENDENCIES:
@@ -9,7 +9,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  ZHAddressTextFiled: 6e3beaa9e60de21ba90037a9566931d261738901
+  ZHAddressTextFiled: ae3deb859898324fcc1c295aebf899984c7f5aa0
 
 PODFILE CHECKSUM: 87cc0cde480a5e0912883a91eb6f3ed7c5ddd284
 
