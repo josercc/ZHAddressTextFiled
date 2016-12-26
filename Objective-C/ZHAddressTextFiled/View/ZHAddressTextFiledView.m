@@ -15,18 +15,17 @@
 @interface ZHAddressTextFiledView ()<UITextFieldDelegate>
 
 /*!
- 输入提示
+ 显示提示文字
  */
-@property (nonatomic, strong) UILabel *inputPromptTitleLabel;
+@property(nonatomic, strong) UILabel *inputPromptTitleLabel;
 /*!
  输入信息的输入框
  */
-@property (nonatomic, strong) UITextField *inputTextFiled;
+@property(nonatomic, strong) UITextField *inputTextFiled;
 /*!
  底部的分割线
  */
-@property (nonatomic, strong) UIView *bottomLineView;
-
+@property(nonatomic, strong) UIView *bottomLineView;
 
 @end
 
@@ -41,23 +40,22 @@
 }
 
 #pragma mark - Init
-- (ZHAddressTextFiledView *)initWithStyle:(ZHAddressTextFiledViewStyle *)style
-                                    frame:(CGRect)frame {
+- (ZHAddressTextFiledView *)initWithStyle:(ZHAddressTextFiledViewStyle *)style frame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         _style = style;
         _isAllowEdit = YES; // 默认允许编辑
         self.backgroundColor = [UIColor whiteColor];
-        [self ATFV_InitState]; // 初始化状态
+        [self atfvInitState]; // 初始化状态
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginEditingNotification:) name:UITextFieldTextDidBeginEditingNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endEditingNotification:) name:UITextFieldTextDidEndEditingNotification object:nil];
     }
     return self;
 }
 
-- (void)ATFV_InitState {
-    [self ATFVAddSubViews];
-    [self ATFVAutoLayouts];
-    [self ATFVStepStyle];
+- (void)atfvInitState {
+    [self atfvAddSubViews];
+    [self atfvAutoLayouts];
+    [self atfvStepStyle];
 }
 
 /*!
@@ -70,14 +68,14 @@
     return [self.inputTextFiled isEqual:textFiled];
 }
 
-#pragma mark - 键盘即将弹出
+#pragma mark - 开始编辑
 /*!
  输入框开始编辑开始
 
  @param notication 通知
  */
 - (void)beginEditingNotification:(NSNotification *)notication {
-    ZHAddressTextFiledView *errorTipSuperView = (ZHAddressTextFiledView *)[ZHAddressErrorTipView sharedInstance].superview;
+    ZHAddressTextFiledView *errorTipSuperView = [ZHAddressErrorTipView sharedInstance].showInAddressTextFiledView;
     if (errorTipSuperView && [errorTipSuperView isEqualTextFiled:notication.object]) {
         // 如果错误试图父试图存在 并且正在编辑的是正在展示错误的试图 移除错误提示
         [[ZHAddressErrorTipView sharedInstance] hide];
@@ -87,6 +85,7 @@
     }
 }
 
+#pragma mark - 结束编辑
 /*!
  输入框结束编辑
 
@@ -151,7 +150,7 @@
     // 设置提示语的颜色 如果正在编辑高亮  结束就恢复默认的颜色
     self.inputPromptTitleLabel.textColor = _style.editState == ATFVEditStateEditing ? _style.inputPromptHighlightColor : _style.inputPromptNormalColor;
     // 设置提示语的大小 只有恢复原来位置字体和输入框字体大小一致 不然恢复原来的字体
-    self.inputPromptTitleLabel.font = !isMovePromptTop ? _style.inputPromptLabelFont : _style.inputAddressFiledFont;
+    self.inputPromptTitleLabel.font = _style.editState == ATFVEditStateEditing ? _style.inputPromptLabelFont : _style.inputAddressFiledFont;
     // 设置分割线的颜色 正在编辑高亮分割线
     self.bottomLineView.backgroundColor = _style.editState != ATFVEditStateEditing ? _style.bottomLineNormalColor : _style.inputAddressFiledTextColor;
     // 设置输入法是否隐藏
@@ -164,24 +163,25 @@
 
 #pragma mark - 移动提示文本到顶部
 - (void)movePromptToTop {
-    BOOL isAllowMove = _style.editState == ATFVEditStateNormal || _style.inputAddressText.length == 0;
+    BOOL isAllowMove = _style.editState == ATFVEditStateNormal;
     if (!isAllowMove) {
         // 如果当前的状态不是默认 就允许继续操作
         return;
     }
-
-    if (self.dataSource && [self.dataSource respondsToSelector:@selector(shouldAllowTextFiledEdit:)]) {
-        _isAllowEdit = [self.dataSource shouldAllowTextFiledEdit:self]; // 获取是否允许编辑
-    }
     if (_isAllowEdit) {
         // 只有允许编辑 才可以设置当前状态为可编辑
         [self setEditState:ATFVEditStateEditing];
+        [self.inputTextFiled becomeFirstResponder];
+    }else {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(addressTextFiledViewDidClickTextFiled:)]) {
+            [self.delegate addressTextFiledViewDidClickTextFiled:self];
+        }
     }
-    [self.inputTextFiled becomeFirstResponder];
+
 }
 
 #pragma mark - 进行布局
-- (void)ATFVAddSubViews {
+- (void)atfvAddSubViews {
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj removeFromSuperview];
     }];
@@ -190,12 +190,13 @@
     [self addSubview:self.inputPromptTitleLabel];
 }
 
-- (void)ATFVAutoLayouts {
+- (void)atfvAutoLayouts {
     [self.inputTextFiled mas_makeConstraints:^(MASConstraintMaker *make) {
         [self ATFVSetTextFiledAutoLayout:make];
     }];
     [self.inputPromptTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (_style.editState == ATFVEditStateNormal) {
+        BOOL isNormalLabelInTextFiled = _style.editState == ATFVEditStateNormal;
+        if (isNormalLabelInTextFiled) {
             [self ATFVSetTextFiledAutoLayout:make];
         }else {
             make.leading.equalTo(self);
@@ -215,8 +216,9 @@
     make.height.mas_equalTo(33);
 }
 
-- (void)ATFVStepStyle {
+- (void)atfvStepStyle {
     if (_style.editState == ATFVEditStateEditing) {
+        // 当处于正在编辑状态 提示语高亮 字体变大 分割线高亮
         self.inputPromptTitleLabel.textColor = _style.inputPromptHighlightColor;
         self.inputPromptTitleLabel.font = _style.inputAddressFiledFont;
         self.bottomLineView.backgroundColor = _style.inputAddressFiledTextColor;
@@ -235,11 +237,13 @@
     if (_style.editState == ATFVEditStateEdited) {
         self.inputTextFiled.text = _style.inputAddressText;
     }
-
 }
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(addressTextFiledViewDidClickTextFiled:)]) {
+        [self.delegate addressTextFiledViewDidClickTextFiled:self];
+    }
     return _isAllowEdit;
 }
 
@@ -248,6 +252,13 @@
     self.inputTextFiled.text = inputText;
     _style.inputAddressText = inputText;
     [self setEditState:ATFVEditStateEdited];
+}
+
+- (void)setDataSource:(id<ZHAddressTextFiledViewDataSource>)dataSource {
+    _dataSource = dataSource;
+    if (dataSource && [dataSource respondsToSelector:@selector(shouldAllowTextFiledEdit:)]) {
+        _isAllowEdit = [dataSource shouldAllowTextFiledEdit:self];
+    }
 }
 
 #pragma mark - Getter
@@ -273,6 +284,7 @@
         _inputTextFiled.returnKeyType = UIReturnKeyNext;
         UIButton *btn = [_inputTextFiled valueForKey:@"_clearButton"];
         [btn setImage:[UIImage imageNamed:@"ATF_close"] forState:UIControlStateNormal];
+
 	}
 	return _inputTextFiled;
 }
@@ -286,7 +298,7 @@
 
 
 - (NSString *)inputText {
-   return self.inputTextFiled.text;
+   return _style.inputAddressText;
 }
 
 @end

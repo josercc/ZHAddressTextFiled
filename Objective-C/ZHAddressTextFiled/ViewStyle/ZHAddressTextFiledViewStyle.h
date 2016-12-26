@@ -17,12 +17,14 @@
  - ATFVEditStateEditing: 正在进行输入
  - ATFVEditStateEdited: 输入完毕
  - ATFVEditStateEditedError: 输入完毕错误
+ - ATFVEditStateNoEdit: 只允许编辑
  */
 typedef NS_ENUM(NSUInteger, ATFVEditState) {
     ATFVEditStateNormal,
     ATFVEditStateEditing,
     ATFVEditStateEdited,
-    ATFVEditStateEditedError
+    ATFVEditStateEditedError,
+//    ATFVEditStateNoEdit
 };
 
 /*!

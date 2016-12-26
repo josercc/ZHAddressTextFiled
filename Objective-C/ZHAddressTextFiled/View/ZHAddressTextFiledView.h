@@ -10,6 +10,7 @@
 #import "ZHDefineBlocks.h"
 #import "ZHAddressTextFiledViewDataSource.h"
 #import "ZHAddressTextFiledViewStyle.h"
+#import "ZHAddressTextFiledDelegate.h"
 
 @class ZHAddressTextFiledViewStyle;
 
@@ -26,7 +27,11 @@
 /*!
  设置数据源 用户是否允许输入 还是响应用户其他操作
  */
-@property (nonatomic, weak) id<ZHAddressTextFiledViewDataSource> dataSource;
+@property(nonatomic, weak) id<ZHAddressTextFiledViewDataSource> dataSource;
+/**
+ 试图的响应操作
+ */
+@property(nonatomic, weak) id<ZHAddressTextFiledViewDelegate> delegate;
 /*!
  输入框的内容 用户可以自己自行设置
  */
