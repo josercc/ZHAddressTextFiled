@@ -32,6 +32,7 @@
     CGFloat _maxErrorTipWidth; // 最大提示的宽度 让程序进行自动的计算
 }
 
+
 + (instancetype)sharedInstance{
     static ZHAddressErrorTipView* instance = nil;
     static dispatch_once_t onceToken;
@@ -86,10 +87,10 @@
 - (void)showInAddressView:(ZHAddressTextFiledView *)addressView errorTipString:(NSString *)errorTipString {
     NSParameterAssert(addressView); // 展示错误信息的父试图必须存在
     NSParameterAssert(errorTipString.length > 0); // 展示的内容长度必须大于0
-    ZHAddressTextFiledView *oldSuperView = (ZHAddressTextFiledView *)self.superview; // 获取错误试图之前的父试图
-    if (oldSuperView) {
-        [oldSuperView reloadNormalState]; // 如果有就改变之前父试图的状态
+    if (self.showInAddressTextFiledView) {
+        [self.showInAddressTextFiledView reloadNormalState]; // 如果有就改变之前父试图的状态
     }
+    _showInAddressTextFiledView = addressView;
     [self errorBiggestError:addressView];
     self.errorTipLabel.text = errorTipString;
     CGSize size = [self.errorTipLabel sizeThatFits:CGSizeMake(_maxErrorTipWidth, CGFLOAT_MAX)];

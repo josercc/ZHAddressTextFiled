@@ -10,6 +10,7 @@
 #import "ZHDefineBlocks.h"
 #import "ZHAddressTextFiledViewDataSource.h"
 #import "ZHAddressTextFiledViewStyle.h"
+#import "ZHAddressTextFiledDelegate.h"
 
 @class ZHAddressTextFiledViewStyle;
 
@@ -21,16 +22,24 @@
 /*!
  验证输入的字符串是否符合要求 用户自己自定义验证方式 如果返回的字符串存在就代表验证不通过 展示返回的字符串
  */
-@property (nonatomic, copy) ATFVValidateInputCorrectComplete validateInputCorrectComplete;
+@property(nonatomic, copy) ATFVValidateInputCorrectComplete validateInputCorrectComplete;
 
 /*!
  设置数据源 用户是否允许输入 还是响应用户其他操作
  */
-@property (nonatomic, weak) id<ZHAddressTextFiledViewDataSource> dataSource;
+@property(nonatomic, weak) id<ZHAddressTextFiledViewDataSource> dataSource;
+/**
+ 试图的响应操作
+ */
+@property(nonatomic, weak) id<ZHAddressTextFiledViewDelegate> delegate;
 /*!
  输入框的内容 用户可以自己自行设置
  */
-@property (nonatomic, copy) NSString *inputText;
+@property(nonatomic, copy) NSString *inputText;
+/**
+ 输入框内容前缀 默认不设置
+ */
+@property(nonatomic, copy) NSString *inputPrefixText;
 
 /*!
  根据自定义的格式生成输入框

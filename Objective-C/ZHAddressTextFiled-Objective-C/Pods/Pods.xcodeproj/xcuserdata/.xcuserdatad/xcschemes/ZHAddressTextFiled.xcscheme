@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BD3A4A9FC868735559C8EC3465594A8B'
+               BlueprintIdentifier = '78CEE8DC0B2394E5DFF482AC8E25EDFB'
                BlueprintName = 'ZHAddressTextFiled'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libZHAddressTextFiled.a'>
