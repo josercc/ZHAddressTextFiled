@@ -1,5 +1,24 @@
 # ZHAddressTextFiled
 
+> ## 1.1.2 新增功能
+>
+> ```objc
+> /**
+>  错误提示展示的父试图 解决提示语被遮挡的BUG 如果为nil则自动判断
+>  */
+> @property(nonatomic, strong) UIView *errorSuperView;
+> ```
+> 我发现把控件放在Cell上面 因为之前是添加到TextFiled上面的 会被下面的Cell遮挡提示框
+>
+> 新增上面属性 让用户赋值 直接把提示语添加到父试图上面
+>
+> 比如我赋值给tableview
+>
+> ```objc
+> [ZHAddressErrorTipView sharedInstance].errorSuperView = self.tableView;
+> ```
+> 完美解决出现的bug
+
 这个输入框是输入把默认提示语上移，我记得有第三方库，但是我就想造轮子，所以就除了这个。
 
 现在支持以下:
@@ -68,4 +87,3 @@ addressView.validateInputCorrectComplete = ^NSString *(NSString *inputText) {
         return nil;
     };
 ```
-

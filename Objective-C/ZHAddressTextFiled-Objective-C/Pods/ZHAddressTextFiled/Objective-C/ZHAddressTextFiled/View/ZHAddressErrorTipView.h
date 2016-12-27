@@ -18,6 +18,10 @@
  获取当前错误提示试图所在的ZHAddressTextFiledView
  */
 @property(nonatomic, strong, readonly) ZHAddressTextFiledView *showInAddressTextFiledView;
+/**
+ 错误提示展示的父试图 解决提示语被遮挡的BUG 如果为nil则自动判断
+ */
+@property(nonatomic, strong) UIView *errorSuperView;
 /*!
  单例 防止全屏幕弹出错误信息 影响用户体验
 
