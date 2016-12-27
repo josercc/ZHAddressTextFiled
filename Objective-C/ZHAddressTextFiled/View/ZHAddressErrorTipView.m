@@ -96,11 +96,11 @@
     CGSize size = [self.errorTipLabel sizeThatFits:CGSizeMake(_maxErrorTipWidth, CGFLOAT_MAX)];
     CGFloat width = size.width <= 17 ? 17 : size.width + 10;
     CGFloat height = 17 + 3 + size.height;
-    UIView *view = addressView;
+    UIView *view = self.errorSuperView ? : addressView;
     [view addSubview:self];
     [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.equalTo(view);
-        make.top.equalTo(view.mas_bottom).offset(-25);
+        make.trailing.equalTo(addressView);
+        make.top.equalTo(addressView.mas_bottom).offset(-25);
         make.size.mas_equalTo(CGSizeMake(width, height));
     }];
 }
@@ -113,7 +113,7 @@
 - (void)errorBiggestError:(ZHAddressTextFiledView *)addressView {
     UIView *view = addressView.superview; // 获取展示试图的父试图
     BOOL stopLoop = NO; // 是否停止查找
-    while (!stopLoop) {
+    while (!stopLoop && !self.errorSuperView) {
         if (!view) {
             stopLoop = YES; // 如果父试图不存在就停止查找
             continue;
@@ -123,6 +123,9 @@
             break;
         }
         view = view.superview;
+    }
+    if (self.errorSuperView) {
+        view = self.errorSuperView;
     }
     if (view) {
         CGRect frame = [addressView convertRect:addressView.bounds toView:view]; // 获取展示试图在查找父试图所在的位置

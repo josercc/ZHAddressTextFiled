@@ -12,7 +12,7 @@
 #import "ZHAddressErrorTipView.h"
 
 
-@interface ZHAddressTextFiledView ()<UITextFieldDelegate>
+@interface ZHAddressTextFiledView ()<UITextFieldDelegate, UIGestureRecognizerDelegate>
 
 /*!
  显示提示文字
@@ -145,7 +145,8 @@
     // 设置提示语的位置 恢复原来的位置 或者 移动到顶部
     [UIView animateWithDuration:0.25 animations:^{
         [self.inputPromptTitleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.leading.trailing.equalTo(self);
+            make.leading.equalTo(self.inputTextFiledPrefixLabel.mas_trailing);
+            make.trailing.equalTo(self);
             if (isMovePromptTop) {
                 make.top.mas_offset(5);
             }else {
@@ -211,7 +212,7 @@
         if (isNormalLabelInTextFiled) {
             [self ATFVSetTextFiledAutoLayout:make];
         }else {
-            make.leading.equalTo(self);
+            make.leading.equalTo(self.inputTextFiledPrefixLabel.mas_trailing);
             make.top.mas_offset(5);
         }
     }];
@@ -261,11 +262,24 @@
     return _isAllowEdit;
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.tapView.hidden = YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    self.tapView.hidden = NO;
+}
+
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
     return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    return YES;
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     return YES;
 }
 
@@ -329,6 +343,7 @@
     if (!_tapView) {
         _tapView = [[UIView alloc] initWithFrame:CGRectZero];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(movePromptToTop)];
+        tap.delegate = self;
         [_tapView addGestureRecognizer:tap];
     }
     return _tapView;
