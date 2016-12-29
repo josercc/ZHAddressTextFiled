@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: ipic
+---
+
 # ZHAddressTextFiled
 
 > ## 1.1.2 新增功能
@@ -28,6 +32,12 @@
 - [x] 自动显示错误的提示
 - [x] 可扩展
 - [x] 支持Cocoapods
+
+效果Gif图
+
+![](https://ww3.sinaimg.cn/large/006tNc79gw1fb7hgzjeivg30db0oa4qp.gif)
+
+
 
 输入框四种状态:
 
