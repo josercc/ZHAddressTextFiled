@@ -145,11 +145,12 @@
     // 设置提示语的位置 恢复原来的位置 或者 移动到顶部
     [UIView animateWithDuration:0.25 animations:^{
         [self.inputPromptTitleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(self.inputTextFiledPrefixLabel.mas_trailing);
             make.trailing.equalTo(self);
             if (isMovePromptTop) {
                 make.top.mas_offset(5);
+                make.leading.equalTo(self.inputTextFiledPrefixLabel);
             }else {
+                make.leading.equalTo(self.inputTextFiledPrefixLabel.mas_trailing);
                 make.bottom.mas_offset(self->_style.bottomLineHeight);
                 make.height.mas_equalTo(33);
             }
@@ -212,7 +213,7 @@
         if (isNormalLabelInTextFiled) {
             [self ATFVSetTextFiledAutoLayout:make];
         }else {
-            make.leading.equalTo(self.inputTextFiledPrefixLabel.mas_trailing);
+            make.leading.equalTo(self.inputTextFiledPrefixLabel);
             make.top.mas_offset(5);
         }
     }];
