@@ -1,9 +1,9 @@
 //
 //  ZHAddressTextFiledViewDataSource.h
-//  GearBest
+//  zhanghang
 //
 //  Created by 张行 on 2016/12/14.
-//  Copyright © 2016年 GearBest. All rights reserved.
+//  Copyright © 2016年 zhanghang. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
