@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4371F9FFDD985B9B1260670A /* libPods-ZHAddressTextFiled.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46731C453F0C488849B13346 /* libPods-ZHAddressTextFiled.a */; };
+		5DAE4EAA20A59836004F2753 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE4EA920A59836004F2753 /* AppDelegate.m */; };
+		5DAE4EAD20A59836004F2753 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE4EAC20A59836004F2753 /* ViewController.m */; };
+		5DAE4EB020A59836004F2753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAE4EAE20A59836004F2753 /* Main.storyboard */; };
+		5DAE4EB220A59836004F2753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAE4EB120A59836004F2753 /* Assets.xcassets */; };
+		5DAE4EB520A59836004F2753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAE4EB320A59836004F2753 /* LaunchScreen.storyboard */; };
+		5DAE4EB820A59836004F2753 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE4EB720A59836004F2753 /* main.m */; };
+		5DB7C6A220B2C30B00896ECA /* ZHAddressTextFiled.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C68920B2C30B00896ECA /* ZHAddressTextFiled.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6A320B2C30B00896ECA /* ATF_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7C68B20B2C30B00896ECA /* ATF_close@2x.png */; };
+		5DB7C6A420B2C30B00896ECA /* ATF_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7C68C20B2C30B00896ECA /* ATF_close@3x.png */; };
+		5DB7C6A520B2C30B00896ECA /* ATF_tip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7C68D20B2C30B00896ECA /* ATF_tip@2x.png */; };
+		5DB7C6A620B2C30B00896ECA /* ATF_tip@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7C68E20B2C30B00896ECA /* ATF_tip@3x.png */; };
+		5DB7C6A720B2C30B00896ECA /* aTF_Triangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7C68F20B2C30B00896ECA /* aTF_Triangle@2x.png */; };
+		5DB7C6A820B2C30B00896ECA /* aTF_Triangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7C69020B2C30B00896ECA /* aTF_Triangle@3x.png */; };
+		5DB7C6A920B2C30B00896ECA /* ZHDefineBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C69220B2C30B00896ECA /* ZHDefineBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6AA20B2C30B00896ECA /* ZHDefineFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C69320B2C30B00896ECA /* ZHDefineFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6AB20B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C69520B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6AC20B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7C69620B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.m */; };
+		5DB7C6AD20B2C30B00896ECA /* ZHAddressTextFiledDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C69820B2C30B00896ECA /* ZHAddressTextFiledDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6AE20B2C30B00896ECA /* ZHAddressTextFiledViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C69920B2C30B00896ECA /* ZHAddressTextFiledViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6AF20B2C30B00896ECA /* ZHAddressErrorTipView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C69B20B2C30B00896ECA /* ZHAddressErrorTipView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6B020B2C30B00896ECA /* ZHAddressErrorTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7C69C20B2C30B00896ECA /* ZHAddressErrorTipView.m */; };
+		5DB7C6B120B2C30B00896ECA /* ZHAddressTextFiledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C69D20B2C30B00896ECA /* ZHAddressTextFiledView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6B220B2C30B00896ECA /* ZHAddressTextFiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7C69E20B2C30B00896ECA /* ZHAddressTextFiledView.m */; };
+		5DB7C6B320B2C30B00896ECA /* ZHAddressTextFiledViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB7C6A020B2C30B00896ECA /* ZHAddressTextFiledViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB7C6B420B2C30B00896ECA /* ZHAddressTextFiledViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7C6A120B2C30B00896ECA /* ZHAddressTextFiledViewStyle.m */; };
+		5DCC084E20A68F1900705BFC /* ZHAddressTextFiled.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCC084720A68F1900705BFC /* ZHAddressTextFiled.framework */; };
+		5DCC084F20A68F1900705BFC /* ZHAddressTextFiled.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCC084720A68F1900705BFC /* ZHAddressTextFiled.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DCC084C20A68F1900705BFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DAE4E9D20A59836004F2753 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DCC084620A68F1900705BFC;
+			remoteInfo = ZHAddressTextFiled;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5DCC085320A68F1900705BFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5DCC084F20A68F1900705BFC /* ZHAddressTextFiled.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0AAAAF716B468E265F9E7A49 /* Pods-ZHAddressTextFiled.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHAddressTextFiled.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHAddressTextFiled/Pods-ZHAddressTextFiled.debug.xcconfig"; sourceTree = "<group>"; };
+		46731C453F0C488849B13346 /* libPods-ZHAddressTextFiled.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZHAddressTextFiled.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DAE4EA520A59836004F2753 /* ZHAddressTextFiled Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZHAddressTextFiled Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DAE4EA820A59836004F2753 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DAE4EA920A59836004F2753 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DAE4EAB20A59836004F2753 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5DAE4EAC20A59836004F2753 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5DAE4EAF20A59836004F2753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DAE4EB120A59836004F2753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DAE4EB420A59836004F2753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DAE4EB620A59836004F2753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DAE4EB720A59836004F2753 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DB7C68920B2C30B00896ECA /* ZHAddressTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiled.h; sourceTree = "<group>"; };
+		5DB7C68B20B2C30B00896ECA /* ATF_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_close@2x.png"; sourceTree = "<group>"; };
+		5DB7C68C20B2C30B00896ECA /* ATF_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_close@3x.png"; sourceTree = "<group>"; };
+		5DB7C68D20B2C30B00896ECA /* ATF_tip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_tip@2x.png"; sourceTree = "<group>"; };
+		5DB7C68E20B2C30B00896ECA /* ATF_tip@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ATF_tip@3x.png"; sourceTree = "<group>"; };
+		5DB7C68F20B2C30B00896ECA /* aTF_Triangle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aTF_Triangle@2x.png"; sourceTree = "<group>"; };
+		5DB7C69020B2C30B00896ECA /* aTF_Triangle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aTF_Triangle@3x.png"; sourceTree = "<group>"; };
+		5DB7C69220B2C30B00896ECA /* ZHDefineBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDefineBlocks.h; sourceTree = "<group>"; };
+		5DB7C69320B2C30B00896ECA /* ZHDefineFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDefineFunction.h; sourceTree = "<group>"; };
+		5DB7C69520B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+ZHAddressTextFiled.h"; sourceTree = "<group>"; };
+		5DB7C69620B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+ZHAddressTextFiled.m"; sourceTree = "<group>"; };
+		5DB7C69820B2C30B00896ECA /* ZHAddressTextFiledDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiledDelegate.h; sourceTree = "<group>"; };
+		5DB7C69920B2C30B00896ECA /* ZHAddressTextFiledViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiledViewDataSource.h; sourceTree = "<group>"; };
+		5DB7C69B20B2C30B00896ECA /* ZHAddressErrorTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressErrorTipView.h; sourceTree = "<group>"; };
+		5DB7C69C20B2C30B00896ECA /* ZHAddressErrorTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAddressErrorTipView.m; sourceTree = "<group>"; };
+		5DB7C69D20B2C30B00896ECA /* ZHAddressTextFiledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiledView.h; sourceTree = "<group>"; };
+		5DB7C69E20B2C30B00896ECA /* ZHAddressTextFiledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAddressTextFiledView.m; sourceTree = "<group>"; };
+		5DB7C6A020B2C30B00896ECA /* ZHAddressTextFiledViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAddressTextFiledViewStyle.h; sourceTree = "<group>"; };
+		5DB7C6A120B2C30B00896ECA /* ZHAddressTextFiledViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAddressTextFiledViewStyle.m; sourceTree = "<group>"; };
+		5DCC084720A68F1900705BFC /* ZHAddressTextFiled.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZHAddressTextFiled.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DCC084A20A68F1900705BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98F5B5C5776CDE4B6692F57E /* Pods-ZHAddressTextFiled.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHAddressTextFiled.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHAddressTextFiled/Pods-ZHAddressTextFiled.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DAE4EA220A59836004F2753 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DCC084E20A68F1900705BFC /* ZHAddressTextFiled.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DCC084320A68F1900705BFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4371F9FFDD985B9B1260670A /* libPods-ZHAddressTextFiled.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DAE4E9C20A59836004F2753 = {
+			isa = PBXGroup;
+			children = (
+				5DAE4EA720A59836004F2753 /* ZHAddressTextFiled Example */,
+				5DCC084820A68F1900705BFC /* ZHAddressTextFiled */,
+				5DAE4EA620A59836004F2753 /* Products */,
+				DC1C254EC7DCC878AB53607A /* Pods */,
+				7DDB4C946C772DC09A869B81 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DAE4EA620A59836004F2753 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE4EA520A59836004F2753 /* ZHAddressTextFiled Example.app */,
+				5DCC084720A68F1900705BFC /* ZHAddressTextFiled.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DAE4EA720A59836004F2753 /* ZHAddressTextFiled Example */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE4EA820A59836004F2753 /* AppDelegate.h */,
+				5DAE4EA920A59836004F2753 /* AppDelegate.m */,
+				5DAE4EAB20A59836004F2753 /* ViewController.h */,
+				5DAE4EAC20A59836004F2753 /* ViewController.m */,
+				5DAE4EAE20A59836004F2753 /* Main.storyboard */,
+				5DAE4EB120A59836004F2753 /* Assets.xcassets */,
+				5DAE4EB320A59836004F2753 /* LaunchScreen.storyboard */,
+				5DAE4EB620A59836004F2753 /* Info.plist */,
+				5DAE4EB720A59836004F2753 /* main.m */,
+			);
+			path = "ZHAddressTextFiled Example";
+			sourceTree = "<group>";
+		};
+		5DB7C68A20B2C30B00896ECA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7C68B20B2C30B00896ECA /* ATF_close@2x.png */,
+				5DB7C68C20B2C30B00896ECA /* ATF_close@3x.png */,
+				5DB7C68D20B2C30B00896ECA /* ATF_tip@2x.png */,
+				5DB7C68E20B2C30B00896ECA /* ATF_tip@3x.png */,
+				5DB7C68F20B2C30B00896ECA /* aTF_Triangle@2x.png */,
+				5DB7C69020B2C30B00896ECA /* aTF_Triangle@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		5DB7C69120B2C30B00896ECA /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7C69220B2C30B00896ECA /* ZHDefineBlocks.h */,
+				5DB7C69320B2C30B00896ECA /* ZHDefineFunction.h */,
+			);
+			path = Defines;
+			sourceTree = "<group>";
+		};
+		5DB7C69420B2C30B00896ECA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7C69520B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.h */,
+				5DB7C69620B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5DB7C69720B2C30B00896ECA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7C69820B2C30B00896ECA /* ZHAddressTextFiledDelegate.h */,
+				5DB7C69920B2C30B00896ECA /* ZHAddressTextFiledViewDataSource.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5DB7C69A20B2C30B00896ECA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7C69B20B2C30B00896ECA /* ZHAddressErrorTipView.h */,
+				5DB7C69C20B2C30B00896ECA /* ZHAddressErrorTipView.m */,
+				5DB7C69D20B2C30B00896ECA /* ZHAddressTextFiledView.h */,
+				5DB7C69E20B2C30B00896ECA /* ZHAddressTextFiledView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DB7C69F20B2C30B00896ECA /* ViewStyle */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7C6A020B2C30B00896ECA /* ZHAddressTextFiledViewStyle.h */,
+				5DB7C6A120B2C30B00896ECA /* ZHAddressTextFiledViewStyle.m */,
+			);
+			path = ViewStyle;
+			sourceTree = "<group>";
+		};
+		5DCC084820A68F1900705BFC /* ZHAddressTextFiled */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7C69420B2C30B00896ECA /* Category */,
+				5DB7C69120B2C30B00896ECA /* Defines */,
+				5DB7C68A20B2C30B00896ECA /* images */,
+				5DB7C69720B2C30B00896ECA /* Protocols */,
+				5DB7C69A20B2C30B00896ECA /* View */,
+				5DB7C69F20B2C30B00896ECA /* ViewStyle */,
+				5DB7C68920B2C30B00896ECA /* ZHAddressTextFiled.h */,
+				5DCC084A20A68F1900705BFC /* Info.plist */,
+			);
+			path = ZHAddressTextFiled;
+			sourceTree = "<group>";
+		};
+		7DDB4C946C772DC09A869B81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46731C453F0C488849B13346 /* libPods-ZHAddressTextFiled.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC1C254EC7DCC878AB53607A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAAF716B468E265F9E7A49 /* Pods-ZHAddressTextFiled.debug.xcconfig */,
+				98F5B5C5776CDE4B6692F57E /* Pods-ZHAddressTextFiled.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5DCC084420A68F1900705BFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB7C6AF20B2C30B00896ECA /* ZHAddressErrorTipView.h in Headers */,
+				5DB7C6A220B2C30B00896ECA /* ZHAddressTextFiled.h in Headers */,
+				5DB7C6B120B2C30B00896ECA /* ZHAddressTextFiledView.h in Headers */,
+				5DB7C6B320B2C30B00896ECA /* ZHAddressTextFiledViewStyle.h in Headers */,
+				5DB7C6AD20B2C30B00896ECA /* ZHAddressTextFiledDelegate.h in Headers */,
+				5DB7C6A920B2C30B00896ECA /* ZHDefineBlocks.h in Headers */,
+				5DB7C6AB20B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.h in Headers */,
+				5DB7C6AA20B2C30B00896ECA /* ZHDefineFunction.h in Headers */,
+				5DB7C6AE20B2C30B00896ECA /* ZHAddressTextFiledViewDataSource.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5DAE4EA420A59836004F2753 /* ZHAddressTextFiled Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DAE4EBB20A59836004F2753 /* Build configuration list for PBXNativeTarget "ZHAddressTextFiled Example" */;
+			buildPhases = (
+				5DAE4EA120A59836004F2753 /* Sources */,
+				5DAE4EA220A59836004F2753 /* Frameworks */,
+				5DAE4EA320A59836004F2753 /* Resources */,
+				5DCC085320A68F1900705BFC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DCC084D20A68F1900705BFC /* PBXTargetDependency */,
+			);
+			name = "ZHAddressTextFiled Example";
+			productName = "ZHAddressTextFiled Example";
+			productReference = 5DAE4EA520A59836004F2753 /* ZHAddressTextFiled Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DCC084620A68F1900705BFC /* ZHAddressTextFiled */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DCC085220A68F1900705BFC /* Build configuration list for PBXNativeTarget "ZHAddressTextFiled" */;
+			buildPhases = (
+				274B99FBD21C870926E3001A /* [CP] Check Pods Manifest.lock */,
+				5DCC084220A68F1900705BFC /* Sources */,
+				5DCC084320A68F1900705BFC /* Frameworks */,
+				5DCC084420A68F1900705BFC /* Headers */,
+				5DCC084520A68F1900705BFC /* Resources */,
+				77941E3C518D02C84A98D0E4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZHAddressTextFiled;
+			productName = ZHAddressTextFiled;
+			productReference = 5DCC084720A68F1900705BFC /* ZHAddressTextFiled.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DAE4E9D20A59836004F2753 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "张行";
+				TargetAttributes = {
+					5DAE4EA420A59836004F2753 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					5DCC084620A68F1900705BFC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5DAE4EA020A59836004F2753 /* Build configuration list for PBXProject "ZHAddressTextFiled Example" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DAE4E9C20A59836004F2753;
+			productRefGroup = 5DAE4EA620A59836004F2753 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DAE4EA420A59836004F2753 /* ZHAddressTextFiled Example */,
+				5DCC084620A68F1900705BFC /* ZHAddressTextFiled */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DAE4EA320A59836004F2753 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DAE4EB520A59836004F2753 /* LaunchScreen.storyboard in Resources */,
+				5DAE4EB220A59836004F2753 /* Assets.xcassets in Resources */,
+				5DAE4EB020A59836004F2753 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DCC084520A68F1900705BFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB7C6A420B2C30B00896ECA /* ATF_close@3x.png in Resources */,
+				5DB7C6A820B2C30B00896ECA /* aTF_Triangle@3x.png in Resources */,
+				5DB7C6A720B2C30B00896ECA /* aTF_Triangle@2x.png in Resources */,
+				5DB7C6A320B2C30B00896ECA /* ATF_close@2x.png in Resources */,
+				5DB7C6A520B2C30B00896ECA /* ATF_tip@2x.png in Resources */,
+				5DB7C6A620B2C30B00896ECA /* ATF_tip@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		274B99FBD21C870926E3001A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77941E3C518D02C84A98D0E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHAddressTextFiled/Pods-ZHAddressTextFiled-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DAE4EA120A59836004F2753 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DAE4EAD20A59836004F2753 /* ViewController.m in Sources */,
+				5DAE4EB820A59836004F2753 /* main.m in Sources */,
+				5DAE4EAA20A59836004F2753 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DCC084220A68F1900705BFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB7C6B020B2C30B00896ECA /* ZHAddressErrorTipView.m in Sources */,
+				5DB7C6B420B2C30B00896ECA /* ZHAddressTextFiledViewStyle.m in Sources */,
+				5DB7C6B220B2C30B00896ECA /* ZHAddressTextFiledView.m in Sources */,
+				5DB7C6AC20B2C30B00896ECA /* NSBundle+ZHAddressTextFiled.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DCC084D20A68F1900705BFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DCC084620A68F1900705BFC /* ZHAddressTextFiled */;
+			targetProxy = 5DCC084C20A68F1900705BFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DAE4EAE20A59836004F2753 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DAE4EAF20A59836004F2753 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DAE4EB320A59836004F2753 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DAE4EB420A59836004F2753 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DAE4EB920A59836004F2753 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5DAE4EBA20A59836004F2753 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DAE4EBC20A59836004F2753 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "ZHAddressTextFiled Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.globalegrow.com.ZHAddressTextFiled-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DAE4EBD20A59836004F2753 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "ZHAddressTextFiled Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.globalegrow.com.ZHAddressTextFiled-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5DCC085020A68F1900705BFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AAAAF716B468E265F9E7A49 /* Pods-ZHAddressTextFiled.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZHAddressTextFiled/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.globalegrow.com.ZHAddressTextFiled;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5DCC085120A68F1900705BFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F5B5C5776CDE4B6692F57E /* Pods-ZHAddressTextFiled.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZHAddressTextFiled/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.globalegrow.com.ZHAddressTextFiled;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DAE4EA020A59836004F2753 /* Build configuration list for PBXProject "ZHAddressTextFiled Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DAE4EB920A59836004F2753 /* Debug */,
+				5DAE4EBA20A59836004F2753 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DAE4EBB20A59836004F2753 /* Build configuration list for PBXNativeTarget "ZHAddressTextFiled Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DAE4EBC20A59836004F2753 /* Debug */,
+				5DAE4EBD20A59836004F2753 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DCC085220A68F1900705BFC /* Build configuration list for PBXNativeTarget "ZHAddressTextFiled" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DCC085020A68F1900705BFC /* Debug */,
+				5DCC085120A68F1900705BFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DAE4E9D20A59836004F2753 /* Project object */;
+}
