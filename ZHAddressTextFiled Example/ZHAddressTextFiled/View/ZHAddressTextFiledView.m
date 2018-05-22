@@ -209,7 +209,7 @@
         make.height.mas_equalTo(33);
     }];
     [self.inputPromptTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        BOOL isNormalLabelInTextFiled = _style.editState == ATFVEditStateNormal;
+        BOOL isNormalLabelInTextFiled = self->_style.editState == ATFVEditStateNormal;
         if (isNormalLabelInTextFiled) {
             [self ATFVSetTextFiledAutoLayout:make];
         }else {
