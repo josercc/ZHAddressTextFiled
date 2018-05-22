@@ -1,14 +1,14 @@
-@version = "1.1.4"
+@version = "1.1.5"
 @podName = "ZHAddressTextFiled"
 @baseURL = "github.com"
 @basePath = "josercc/#{@podName}"
-@source_files = "#{@podName} Example/#{@podName}/**/*.{h,m}"
+@source_files = "#{@podName} Example/#{@podName}/**/*.[h,m]"
 @frameworkName = "#{@podName}"
 Pod::Spec.new do |s|
   s.name          = "#{@podName}"
   s.version       = @version
   s.summary       = "支持自定义错误提示 未编辑 编辑中 编辑完成等状态 自定义输入框"
-  s.homepage      = "http://#{@baseURL}/#{@basePath}"
+  s.homepage      = "https://#{@baseURL}/#{@basePath}"
   s.license       = { :type => 'MIT', :file => 'LICENSE' }
   s.author        = { "josercc" => "josercc@163.com" }
   s.platform      = :ios, '8.0'
@@ -25,5 +25,6 @@ Pod::Spec.new do |s|
   echo 'git "git@#{@baseURL}:#{@basePath}.git" == #{@version}' > Cartfile
   Carthage update --platform iOS
   CMD
-  pod.dependency "Masonry"
+  s.dependency "Masonry"
+  puts s
 end
