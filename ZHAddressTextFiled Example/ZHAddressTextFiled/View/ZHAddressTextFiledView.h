@@ -41,6 +41,8 @@
  */
 @property(nonatomic, copy) NSString *inputPrefixText;
 
+@property(nonatomic, strong, readonly) UITextField *inputTextFiled;
+
 /*!
  根据自定义的格式生成输入框
 
