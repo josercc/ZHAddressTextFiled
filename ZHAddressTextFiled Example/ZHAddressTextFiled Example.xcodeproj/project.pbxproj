@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4371F9FFDD985B9B1260670A /* libPods-ZHAddressTextFiled.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46731C453F0C488849B13346 /* libPods-ZHAddressTextFiled.a */; };
 		5DAE4EAA20A59836004F2753 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE4EA920A59836004F2753 /* AppDelegate.m */; };
 		5DAE4EAD20A59836004F2753 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE4EAC20A59836004F2753 /* ViewController.m */; };
 		5DAE4EB020A59836004F2753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAE4EAE20A59836004F2753 /* Main.storyboard */; };
@@ -62,8 +61,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0AAAAF716B468E265F9E7A49 /* Pods-ZHAddressTextFiled.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHAddressTextFiled.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHAddressTextFiled/Pods-ZHAddressTextFiled.debug.xcconfig"; sourceTree = "<group>"; };
-		46731C453F0C488849B13346 /* libPods-ZHAddressTextFiled.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZHAddressTextFiled.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAE4EA520A59836004F2753 /* ZHAddressTextFiled Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZHAddressTextFiled Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAE4EA820A59836004F2753 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DAE4EA920A59836004F2753 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		5DB7C6A120B2C30B00896ECA /* ZHAddressTextFiledViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAddressTextFiledViewStyle.m; sourceTree = "<group>"; };
 		5DCC084720A68F1900705BFC /* ZHAddressTextFiled.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZHAddressTextFiled.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCC084A20A68F1900705BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98F5B5C5776CDE4B6692F57E /* Pods-ZHAddressTextFiled.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHAddressTextFiled.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHAddressTextFiled/Pods-ZHAddressTextFiled.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4371F9FFDD985B9B1260670A /* libPods-ZHAddressTextFiled.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,8 +119,6 @@
 				5DAE4EA720A59836004F2753 /* ZHAddressTextFiled Example */,
 				5DCC084820A68F1900705BFC /* ZHAddressTextFiled */,
 				5DAE4EA620A59836004F2753 /* Products */,
-				DC1C254EC7DCC878AB53607A /* Pods */,
-				7DDB4C946C772DC09A869B81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,23 +222,6 @@
 			path = ZHAddressTextFiled;
 			sourceTree = "<group>";
 		};
-		7DDB4C946C772DC09A869B81 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				46731C453F0C488849B13346 /* libPods-ZHAddressTextFiled.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DC1C254EC7DCC878AB53607A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0AAAAF716B468E265F9E7A49 /* Pods-ZHAddressTextFiled.debug.xcconfig */,
-				98F5B5C5776CDE4B6692F57E /* Pods-ZHAddressTextFiled.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -291,12 +267,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DCC085220A68F1900705BFC /* Build configuration list for PBXNativeTarget "ZHAddressTextFiled" */;
 			buildPhases = (
-				274B99FBD21C870926E3001A /* [CP] Check Pods Manifest.lock */,
 				5DCC084220A68F1900705BFC /* Sources */,
 				5DCC084320A68F1900705BFC /* Frameworks */,
 				5DCC084420A68F1900705BFC /* Headers */,
 				5DCC084520A68F1900705BFC /* Resources */,
-				77941E3C518D02C84A98D0E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,39 +344,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		274B99FBD21C870926E3001A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		77941E3C518D02C84A98D0E4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHAddressTextFiled/Pods-ZHAddressTextFiled-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DAE4EA120A59836004F2753 /* Sources */ = {
@@ -590,7 +531,6 @@
 		};
 		5DCC085020A68F1900705BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AAAAF716B468E265F9E7A49 /* Pods-ZHAddressTextFiled.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -614,7 +554,6 @@
 		};
 		5DCC085120A68F1900705BFC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98F5B5C5776CDE4B6692F57E /* Pods-ZHAddressTextFiled.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
