@@ -1,4 +1,4 @@
-@version = "1.1.8"
+@version = "1.1.9"
 @podName = "ZHAddressTextFiled"
 @baseURL = "github.com"
 @basePath = "josercc/#{@podName}"
